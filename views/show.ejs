@@ -1,0 +1,40 @@
+<%- include('header'); -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <style>
+        .addspace {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.resize {
+    height: 150px;
+    width: 150px;
+}
+    </style>
+</head>
+<body>
+    <div class="ui main text container segment centered">
+        <div class="ui huge header"><%=book.name%></div>
+            <div class='description'>
+            <p>Description: <%-book.desc%></p>
+            </div>
+           <div class="addspace">
+            <a href='/books/<%=book._id%>/edit' class='ui green basic button'>Edit</a>
+
+           </div>
+           <div>
+            <form id ='delete' action='/books/<%=book._id%>?_method=DELETE' method='POST'>
+                <button class='ui red basic button' >Delete</button>
+           </form>
+           </div>
+            
+         
+    </div>
+</body>
+</html>

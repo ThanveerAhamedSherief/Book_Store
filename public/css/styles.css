@@ -1,0 +1,31 @@
+.resize {
+    height: 100px;
+    width: 100px;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+.resizeImage{
+    height: 300px;
+    width: 300px;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+.column {
+    float: left;
+    width: 30%;
+  }
+i.icon {
+    font-size: 4em;
+}
+
+.container.main {
+    margin-top: 7.0em;
+}
+
+#delete {
+    display: inline;
+}
+.addspace {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

@@ -1,0 +1,26 @@
+<%- include('header'); -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+</head>
+<body>
+    <div class="ui main text container segment">
+        <div class="ui huge header"> Edit <%= book.name%></div>
+          <form action="/books/<%=book._id%>?_method=PUT" method="POST" class="ui form">
+            <div class="field">
+                <label> Book Title: </label>
+                <input type="text" name="name" placeholder="title" value='<%=book.name%>'>
+            </div>
+             <div class="field">
+                    <label>Book Description: </label>
+                    <textarea name="desc" value='<%=book.desc%>'><%=book.desc%></textarea>
+             </div>
+             <input type="submit" class="ui violet basic button">
+          </form>
+    </div>
+</body>
+</html>

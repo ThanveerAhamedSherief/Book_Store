@@ -1,0 +1,64 @@
+<%- include('header'); -%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Image Uploading</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+<body>
+	<div class="ui main text container segment">
+        <div class="ui huge header"> New Blog</div>
+          <form action="/addBook" method="POST" enctype="multipart/form-data" class="ui form">
+            <div>
+				<label for="name">
+					Book Title</label>
+				<input type="text" id="name"  class="field" placeholder="Name"
+					value="" name="name" required>
+			</div>
+			<div>
+				<label for="desc">Book Description</label>
+				<textarea id="desc" name="desc" class="field" value="" rows="2"
+						placeholder="Description" required>
+				</textarea>
+			</div>
+			<div>
+				<label for="image">Book Image</label>
+				<input type="file" id="image" class="field"
+					name="image" value="" required multiple>
+			</div>
+			<hr>
+			<div>
+				<button type="submit" class="ui violet basic button">Submit</button>
+			</div>
+          </form>
+    </div>
+	<!-- <div>
+		<form action="/addBook" method="POST" enctype="multipart/form-data">
+			<div>
+				<label for="name">
+					Book Title</label>
+				<input type="text" id="name" placeholder="Name"
+					value="" name="name" required>
+			</div>
+			<div>
+				<label for="desc">Book Description</label>
+				<textarea id="desc" name="desc" value="" rows="2"
+						placeholder="Description" required>
+				</textarea>
+			</div>
+			<div>
+				<label for="image">Book Image</label>
+				<input type="file" id="image"
+					name="image" value="" required>
+			</div>
+			<div>
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+	</div> -->
+</body>
+
+</html>
