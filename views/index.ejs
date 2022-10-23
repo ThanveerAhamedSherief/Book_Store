@@ -6,10 +6,10 @@
         <div >
             <h2><%=book.name%></h2>
             <%book.images.forEach((image) => {%>
-                    <img src="data:image/<%=image.contentType%>;base64,
+                    <img alt="" src="data:image/<%=image.contentType%>;base64,
                     <%=image.imageBase64%>" class="resize">
                 <% })%><br>
             <span>Description: <%=book.desc%></span>
-            <a href='/books/<%=book._id%>'>...Details</a>
+            <a href='/books/<%=book._id%>'>...View Details</a>
         </div>
    <% })%>

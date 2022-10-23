@@ -15,12 +15,48 @@
 .resize {
     height: 150px;
     width: 150px;
+    padding-right: 10px;
+}
+.img-wrap {
+    position: relative;
+    display: inline-block;
+    border: 1px red solid;
+    font-size: 0;
+}
+.img-wrap .close {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 100;
+    background-color: #FFF;
+    padding: 5px 2px 2px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: .2;
+    text-align: center;
+    font-size: 22px;
+    line-height: 10px;
+    border-radius: 50%;
+}
+.img-wrap:hover .close {
+    opacity: 1;
 }
     </style>
 </head>
 <body>
     <div class="ui main text container segment centered">
         <div class="ui huge header"><%=book.name%></div>
+        <div>
+            <%book.images.forEach((image) => {%>
+                <div class="img-wrap">
+                    <span class="close">&times;</span>
+               <a href='/images/<%=image._id%>/<%=book._id%>/delete'> <img alt="" src="data:image/<%=image.contentType%>;base64,
+                <%=image.imageBase64%>" class="resize button"></a>
+            </div>
+            <% })%><br>
+
+        </div>
             <div class='description'>
             <p>Description: <%-book.desc%></p>
             </div>

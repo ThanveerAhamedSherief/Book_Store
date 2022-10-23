@@ -10,7 +10,7 @@
 <body>
     <div class="ui main text container segment">
         <div class="ui huge header"> Edit <%= book.name%></div>
-          <form action="/books/<%=book._id%>?_method=PUT" method="POST" class="ui form">
+          <form action="/books/<%=book._id%>?_method=PUT" method="POST" class="ui form" enctype="multipart/form-data">
             <div class="field">
                 <label> Book Title: </label>
                 <input type="text" name="name" placeholder="title" value='<%=book.name%>'>
@@ -19,6 +19,11 @@
                     <label>Book Description: </label>
                     <textarea name="desc" value='<%=book.desc%>'><%=book.desc%></textarea>
              </div>
+             <div>
+              <label for="image">Book Image</label>
+              <input type="file" id="image" class="field"
+                name="image" value="" required multiple>
+            </div>
              <input type="submit" class="ui violet basic button">
           </form>
     </div>
