@@ -9,7 +9,7 @@ STEP 2:
 STEP 3:
 
 - You will get the home page.then click on new post add the required details.
-- Note : file format should be (PNG) and you can upload upto 5 files only.
+- Note : file format should be (PNG,JPG,JPEG) and you can upload upto 5 files only.
 - Once the data insertion is done, you gets navigated to the home page.
 - If you wanna see the view, then click on (View Details).you will navigate to the view page.
 - In the view page,If you want to delete the image only,then you can just hover on the image and click.
